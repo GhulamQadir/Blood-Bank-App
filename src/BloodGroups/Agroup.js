@@ -68,7 +68,7 @@ function AGroup(){
             <View style={styles.donationContainer}>
                 <TextInput style={styles.bloodInfoInput} value={firstName} onChangeText={(e) => setFirstName(e)} placeholder="First name" />
                 <TextInput style={styles.bloodInfoInput} value={lastName} onChangeText={(e) => setLastName(e)} placeholder="Last name" />
-                <TextInput keyboardType={'email-address'} value={email} onChangeText={(text) => setEmail(text)} style={styles.bloodInfoInput} placeholder="Your email" />
+                <TextInput keyboardType={'email-address'} value={email} onChangeText={(e) => setEmail(e)} style={styles.bloodInfoInput} placeholder="Your email" />
                 <TextInput style={styles.bloodInfoInput} value={countName} onChangeText={(e) => setCountName(e)} placeholder="Your Country name" />
                 <TextInput style={styles.bloodInfoInput} value={cityName} onChangeText={(e) => setCityName(e)} placeholder="Your City name" />
                 <TextInput keyboardType={'number-pad'} value={phoneNum} onChangeText={(e) => setPhoneNum(e)} style={styles.bloodInfoInput} placeholder="Your phone number" />
@@ -76,9 +76,9 @@ function AGroup(){
                 <TextInput style={styles.bloodInfoInput} value={donation} onChangeText={(e) => setDonation(e)} placeholder="Amount of blood donation" />
                 <TextInput keyboardType={'email-address'} value={confirmEmail} onChangeText={(e) => setConfirmEmail(e)} style={styles.bloodInfoInput} placeholder="Your confirm email" />
 
-<TouchableOpacity style={styles.donateBtn} activeOpacity={0.7}>
-    <Text style={{color: 'white'}} onPress={save_data}>Donate now</Text>
-</TouchableOpacity>
+                <TouchableOpacity style={styles.donateBtn} activeOpacity={0.7}>
+                <Text style={{color: 'white'}} onPress={save_data}>Donate now</Text>
+                </TouchableOpacity>
             </View>
             </View>
             </ScrollView>

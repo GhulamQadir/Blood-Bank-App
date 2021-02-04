@@ -5,7 +5,7 @@ import { color } from 'react-native-reanimated';
 
 
 
-function AGroup(){
+function OGroup(){
     
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -116,6 +116,6 @@ const styles = StyleSheet.create({
     }
 })
 
-export default AGroup;
+export default OGroup;
 
 

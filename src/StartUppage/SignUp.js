@@ -5,27 +5,11 @@ import { StyleSheet, View, Text, StatusBar, Image, TextInput, TouchableOpacity, 
 // import firebase from '@react-native-firebase/app';
 // import auth from '@react-native-firebase/auth';
 import { login, signUp } from '../controller/loginController'
-
-// import { Container, Header, Content, Form, Item, Input } from 'native-base';
-
-// var firebaseConfig = {
-//   apiKey: "AIzaSyAP3KVBcnuY6mUTFgd6M44oMp6ct04pQ_4",
-//   authDomain: "e-commerce-web-app-ae9ca.firebaseapp.com",
-//   databaseURL: "https://e-commerce-web-app-ae9ca.firebaseio.com",
-//   projectId: "e-commerce-web-app-ae9ca",
-//   storageBucket: "e-commerce-web-app-ae9ca.appspot.com",
-//   messagingSenderId: "673302860540",
-//   appId: "1:673302860540:web:25443068488428873c7d79"
-// };
-// Initialize Firebase
-// if(!firebase.apps.length){
-//   firebase.initializeApp(firebaseConfig);
-// }
-
 import AppNavigation from '../config/navigation';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { color } from 'react-native-reanimated';
-// import { ScrollView } from 'react-native-gesture-handler';
+
+
 import { Button } from 'native-base'
 export default function SignUp({navigation}){
   const [email, setEmail] = useState("");
@@ -49,6 +33,7 @@ export default function SignUp({navigation}){
   const signUpComplete = () => {
     navigation.navigate("Home")
   }
+
   // const seePassword = (password) => {
   //   setData({
   //     ...password,
@@ -111,21 +96,18 @@ export default function SignUp({navigation}){
                 value={email} onChangeText={(text) => setEmail((text))}  />
                 
                 <Text style={styles.inputHeadings}>Password:</Text>
-                {/* <TouchableOpacity>
-                  <FontAwesome5 style={{height: 16,textAlign: 'right', color: 'red'}} name="eye-slash" />
-                </TouchableOpacity> */}
                 <TextInput  secureTextEntry={true}
                  style={styles.input}
                  placeholder="Your password"
                  value={password} onChangeText={(text) => setPassword((text))} />                
 
                 <TouchableOpacity style={styles.signInBtn}
-                onPress={loginUser}>
+                onPress={loginUser} activeOpacity={0.7}>
                 <Text style={{fontSize: 15, alignItems: 'center', color: 'white'}}>Login</Text>
                 </TouchableOpacity>
                 
                 <TouchableOpacity style={styles.signInBtn}
-                onPress={signUpUser}>
+                onPress={signUpUser} activeOpacity={0.7}>
                 <Text style={{fontSize: 15, alignItems: 'center', color: 'white'}}>Sign Up</Text>
                 </TouchableOpacity>
             </View>
@@ -162,12 +144,9 @@ registration: {
 },
 input: {
     color: 'black',
-    // borderColor: 'red',
-    // borderWidth: 1,
     height: 40,
     width: 180,
     marginBottom: 20,
-    // borderRadius: 3
     borderBottomWidth: 1,
     borderBottomColor: 'red'
 },

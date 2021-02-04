@@ -34,7 +34,8 @@ export function signUp(email, password, signUpComplete){
 
   console.log("SignUp Email==>", email);
   console.log("SignUp Password==>", password)
+}
 
-
-
+export function signOut(signedOut){
+  firebase.auth().signOut().then(() => signedOut )
 }

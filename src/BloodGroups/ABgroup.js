@@ -48,7 +48,7 @@ function ABGroup(){
             <View style={styles.donationContainer}>
                 <TextInput style={styles.bloodInfoInput} value={firstName} onChangeText={(e) => setFirstName(e)} placeholder="First name" />
                 <TextInput style={styles.bloodInfoInput} value={lastName} onChangeText={(e) => setLastName(e)} placeholder="Last name" />
-                <TextInput keyboardType={'email-address'} value={email} onChangeText={(text) => setEmail(text)} style={styles.bloodInfoInput} placeholder="Your email" />
+                <TextInput keyboardType={'email-address'} value={email} onChangeText={(e) => setEmail(e)} style={styles.bloodInfoInput} placeholder="Your email" />
                 <TextInput style={styles.bloodInfoInput} value={countName} onChangeText={(e) => setCountName(e)} placeholder="Your Country name" />
                 <TextInput style={styles.bloodInfoInput} value={cityName} onChangeText={(e) => setCityName(e)} placeholder="Your City name" />
                 <TextInput keyboardType={'number-pad'} value={phoneNum} onChangeText={(e) => setPhoneNum(e)} style={styles.bloodInfoInput} placeholder="Your phone number" />

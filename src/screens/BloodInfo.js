@@ -14,6 +14,8 @@ function BloodInfo({ navigation }){
                 <Text style={styles.bloodTypesHead}>Blood Types:</Text>
                 <Text style={{fontSize: 16, lineHeight: 25, color: 'black'}}>Although all blood is made of the same basic elements, not all blood is alike. Infect, there are eight different common blood types, which are determined by the presence or absence of certain antigens–substances that can trigger an immune response if they are foreign to the body. Since some antigens can trigger patient’s immune system to attack the transfused blood, safe blood transfusions depend on careful blood typing and cross-matching. There are four major blood groups determinedby the presence or absence of two antigens–A and B–on the surface of red blood cells:</Text>
             </View>
+            <Button title="Our Branches" onPress={() => navigation.navigate("Branches")} />
+           
             <View style={{marginTop: 25, marginBottom: 25}}>
                 <Text style={{fontSize: 20, color: 'red', alignItems: 'center'}}>Select your Blood Group</Text>
                 <TouchableOpacity style={styles.groupBtn} activeOpacity={0.4}
