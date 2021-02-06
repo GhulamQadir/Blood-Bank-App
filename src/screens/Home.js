@@ -23,11 +23,11 @@ function Home({navigation}){
 
         <View style={{flex: 1}}>
         <View style={styles.buttons}>        
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("BloodInfo")}>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button} onPress={() => navigation.navigate("BloodInfo")}>
             <Text style={styles.buttonText}>View Donor Details</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={signedOut}>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button} onPress={signedOut}>
             <Text style={styles.buttonText}>Sign Out</Text>
         </TouchableOpacity>
         </View>

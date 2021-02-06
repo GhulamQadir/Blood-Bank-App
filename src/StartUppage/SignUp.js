@@ -8,9 +8,9 @@ import { login, signUp } from '../controller/loginController'
 import AppNavigation from '../config/navigation';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { color } from 'react-native-reanimated';
-
-
 import { Button } from 'native-base'
+
+
 export default function SignUp({navigation}){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

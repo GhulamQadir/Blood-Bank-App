@@ -9,7 +9,6 @@ import BGroup from '../BloodGroups/Bgroup';
 import ABGroup from '../BloodGroups/ABgroup';
 import OGroup from '../BloodGroups/Ogroup';
 import Branches from '../Branches/Branches';
-import KarachiLocation from '../BranchesLocations/KarachiLocation';
 
 const Stack = createStackNavigator();
 
@@ -25,7 +24,6 @@ function AppNavigation() {
         <Stack.Screen name="ABGroup" component={ABGroup} />
         <Stack.Screen name="OGroup" component={OGroup} />
         <Stack.Screen name="Branches" component={Branches} />
-        <Stack.Screen name="KarachiLocation" component={KarachiLocation} />
       </Stack.Navigator>
     </NavigationContainer>
   );

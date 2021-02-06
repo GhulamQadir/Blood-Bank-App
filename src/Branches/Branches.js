@@ -4,60 +4,68 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 
 
-function Branches({ navigation }){
+function Branches(){
     return(
         <ScrollView>
         <View>
+            <Text style={styles.mainText}>Our Branches is in the eight cities of Pakistan:</Text>
         <View style={{flex: 1, marginTop: 5, marginBottom: 20}}>
         <View style={styles.buttons}>        
-        <TouchableOpacity style={styles.button}
-        onPress={() => navigation.navigate("KarachiLocation")}>
-            <Text style={styles.buttonText}>Karachi Branch</Text>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+            <Text style={styles.buttonText}>Karachi</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Lahore Branch</Text>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+            <Text style={styles.buttonText}>Lahore</Text>
         </TouchableOpacity>
         </View>
  
         <View style={styles.buttons}>        
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Islamabad Branch</Text>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+            <Text style={styles.buttonText}>Islamabad</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Faislabad Branch</Text>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+            <Text style={styles.buttonText}>Faislabad</Text>
         </TouchableOpacity>
         </View>
 
         <View style={styles.buttons}>        
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Multan Branch</Text>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+            <Text style={styles.buttonText}>Multan</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Rawalpindi Branch</Text>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+            <Text style={styles.buttonText}>Rawalpindi</Text>
         </TouchableOpacity>
         </View>
  
         <View style={styles.buttons}>        
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Peshawar Branch</Text>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+            <Text style={styles.buttonText}>Peshawar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Quetta Branch</Text>
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+            <Text style={styles.buttonText}>Quetta</Text>
         </TouchableOpacity>
         </View>
- 
         </View>
-
+        
+        <Text style={styles.mainText}>For more information contact us on:</Text>
+        <Text style={styles.mainText}>03180254726</Text>
         </View>
         </ScrollView>
  
     )
 }
 const styles = StyleSheet.create({
+    mainText: {
+        fontSize: 17,
+        marginTop: 10,
+        marginHorizontal: 10,
+        color: 'brown',
+        fontWeight: '600'
+    },
     button: {
         borderWidth: 2,
         height: 140,

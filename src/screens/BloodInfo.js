@@ -1,6 +1,5 @@
 import React from 'react'
-import { Button, View, Text, StyleSheet, ScrollView, Image } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Button, View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 
 
 
@@ -14,7 +13,6 @@ function BloodInfo({ navigation }){
                 <Text style={styles.bloodTypesHead}>Blood Types:</Text>
                 <Text style={{fontSize: 16, lineHeight: 25, color: 'black'}}>Although all blood is made of the same basic elements, not all blood is alike. Infect, there are eight different common blood types, which are determined by the presence or absence of certain antigens–substances that can trigger an immune response if they are foreign to the body. Since some antigens can trigger patient’s immune system to attack the transfused blood, safe blood transfusions depend on careful blood typing and cross-matching. There are four major blood groups determinedby the presence or absence of two antigens–A and B–on the surface of red blood cells:</Text>
             </View>
-            <Button title="Our Branches" onPress={() => navigation.navigate("Branches")} />
            
             <View style={{marginTop: 25, marginBottom: 25}}>
                 <Text style={{fontSize: 20, color: 'red', alignItems: 'center'}}>Select your Blood Group</Text>
@@ -38,6 +36,10 @@ function BloodInfo({ navigation }){
                     <Image style={{height: 80, width: 80}}  source={{uri: 'https://www.seekpng.com/png/small/364-3648208_blood-group-0-rh-factor-positive-blood-a.png'}} />
                 </TouchableOpacity>
                 </View>
+                <TouchableOpacity activeOpacity={0.7} style={styles.branches}
+                onPress={() => navigation.navigate("Branches")}>
+                    <Text style={styles.branchesText}>Our Branches</Text>
+                </TouchableOpacity>
         </View>
         </ScrollView>
     )
@@ -64,6 +66,20 @@ const styles = StyleSheet.create({
     },
     groupBtn: {
         alignItems:'center',
+    },
+    branches: {
+        marginTop: 18,
+        borderWidth: 2,
+        borderRadius: 4,
+        borderColor: 'brown',
+        height: 28,
+        width: 90,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'brown',
+    },
+    branchesText: {
+        color: 'white',
     }
 })
 export default BloodInfo;
